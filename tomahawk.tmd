@@ -2778,11 +2778,17 @@
                 <[uint32][PositionID][BalanceIndicatorBall.R]>
             >
        // CLOCK gauge
+            <[graphics_input][LocalTime][]
+                <[uint32][InputID][LocalTime.Output]>
+            >
+            <[graphics_sec_to_hms][Watch][]
+                <[string8][Input][LocalTime.Output]>
+            >		   
             <[hingedbodygraphics][SecondsWatch][]
                 <[string8][GeometryList][ clock_sec ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][Watch.Seconds60]>	
                 <[float64][AngleMax][0.104667]>
                 <[tmvector3d][Axis][-1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][0.333200 0.465200 0.345650]>
@@ -2791,7 +2797,7 @@
                 <[string8][GeometryList][ clock_min ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][LocalTime.Output]>
                 <[float64][AngleMax][0.001744]>
                 <[tmvector3d][Axis][-1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][0.333200 0.465200 0.345650)]>
@@ -2800,7 +2806,7 @@
                 <[string8][GeometryList][ clock_hour ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][LocalTime.Output]>
                 <[float64][AngleMax][0.00014537037]>
                 <[tmvector3d][Axis][-1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][0.333200 0.465200 0.345650]>
