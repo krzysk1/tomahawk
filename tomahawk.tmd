@@ -24,7 +24,7 @@
                 <[tmvector3d][R0][ -0.5213 0.2438 0.6401 ]>
                 <[tmvector3d][Direction][ 1.0 0.0 0.0 ]>
                 <[float64][Kf][40.0]>
-                <[float64][Df][1.00]>
+                <[float64][Df][1.0]>
                 <[float64][Kt][0.04]>
                 <[float64][Dt][0.02]>
                 <[bool][InCockpit][true]>
@@ -572,21 +572,40 @@
                 <[string8][Input][MixElevatorTrim.Output]>
                 <[tmvector2d][Range][ -1.0 1.0 ]>
             >
-            <[input_default][AileronTrimInput][]
-                <[tmvector2d][Range][ -1.0 1.0 ]>
+            <[input_default][AileronTrim][]
                 <[string8][Input][Controls.AileronTrim]>
-                <[uint][Positions][201]>
+                <[uint][Positions][401]>
                 <[tmvector2d][Range][ -1.0 1.0 ]>
                 <[float64][Value][0.0]>
-                <[float64][Speed][0.125]>			
+                <[float64][Speed][0.1]>
+            >
+            <[mixlinear][AileronTrimmedMix][]
+                <[string8][Input0][AileronInput.Output]>
+                <[string8][Input1][AileronTrim.Output]>
+                <[float64][Weight0][1.0]>
+                <[float64][Weight1][0.2]>
+                <[float64][Offset][0.0]>
+            >
+            <[clamp][AileronTrimmed][]
+                <[string8][Input][AileronTrimmedMix.Output]>
+                <[tmvector2d][Range][ -1.0 1.0 ]>
             >
             <[input_default][RudderTrimInput][]
-                <[tmvector2d][Range][ -1.0 1.0 ]>
                 <[string8][Input][Controls.RudderTrim]>
-                <[uint][Positions][201]>
+                <[uint][Positions][101]>
                 <[tmvector2d][Range][ -1.0 1.0 ]>
-                <[float64][Value][0.0]>
-                <[float64][Speed][0.125]>			
+                <[float64][Speed][0.3]>
+            >
+            <[mixlinear][RudderTrimmedMix][]
+                <[string8][Input0][RudderInput.Output]>
+                <[string8][Input1][RudderTrimInput.Output]>
+                <[float64][Weight0][1.0]>
+                <[float64][Weight1][0.2]>
+                <[float64][Offset][0.0]>
+            >
+            <[clamp][RudderTrimmed][]
+                <[string8][Input][RudderTrimmedMix.Output]>
+                <[tmvector2d][Range][ -1.0 1.0 ]>
             >
             <[servolinear][ServoFlaps][]
                 <[string8][Input][FlapsInput.Output]>
@@ -599,7 +618,7 @@
                 <[string8][Input][ServoFlaps.Output]>
             >
             <[servoclassic][ServoLeftAileron][]
-                <[string8][Input][AileronInput.Output]>
+                <[string8][Input][AileronTrimmed.Output]>
                 <[float64][Speed][2.0]>
                 <[float64][P0][0.0]>
                 <[float64][P1][0.453786]>
@@ -610,7 +629,7 @@
                 <[string8][Input][ServoLeftAileron.Output]>
             >
             <[servoclassic][ServoRightAileron][]
-                <[string8][Input][AileronInput.Output]>
+                <[string8][Input][AileronTrimmed.Output]>
                 <[float64][Speed][2.0]>
                 <[float64][P0][0.0]>
                 <[float64][P1][-0.453786]>
@@ -644,7 +663,7 @@
             >
             <[servoclassic][ServoElevatorTrim][]
                 <[string8][Input][ElevatorTrimInput.Output]>
-                <[float64][Speed][0.100000]>
+                <[float64][Speed][0.1]>
                 <[float64][P0][0.0]>
                 <[float64][P1][0.174533]>
                 <[float64][P2][0.0]>
@@ -654,7 +673,7 @@
                 <[string8][Input][ServoElevatorTrim.Output]>
             >
             <[servoclassic][ServoRudder][]
-                <[string8][Input][RudderInput.Output]>
+                <[string8][Input][RudderTrimmed.Output]>
                 <[float64][Speed][5.0]>
                 <[float64][P0][0.0]>
                 <[float64][P1][0.506145]>
