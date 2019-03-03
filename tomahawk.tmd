@@ -1,4 +1,16 @@
 <[file][][]
+
+	//-------------------------------------
+	//
+	// Plane: Piper Pa-38 Tomahawk
+	//
+    // Original 3D design and sound files: 
+	//		Adrian Fernandez Gomez (Alcala Simulacion)		
+    // Original Aerofly FS 1 & Aerofly FS 2 adaptation: 
+	// 		Krzysztof Kaniewski krzysk (at) wp.pl
+	//
+	//-------------------------------------
+
     <[modelmanager][][]
         <[pointer_list_tmuniverse][DynamicObjects][]
 		
@@ -638,17 +650,6 @@
             >
             <[output_free][ServoRightAileronOutput][]
                 <[string8][Input][ServoRightAileron.Output]>
-            >
-            <[servoclassic][ServoAileronTrim][]
-                <[string8][Input][AileronTrimInput.Output]>
-                <[float64][Speed][100.0]>
-                <[float64][P0][0.0]>
-                <[float64][P1][0.0]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
-            >
-            <[output_free][ServoAileronTrimOutput][]
-                <[string8][Input][ServoAileronTrim.Output]>
             >
             <[servoclassic][ServoElevator][]
                 <[string8][Input][ElevatorTrimmed.Output]>
