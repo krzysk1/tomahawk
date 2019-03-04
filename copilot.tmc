@@ -1,0 +1,47 @@
+<[file][][]
+    <[hints][][]
+        // Tomahawk
+        <[float64][MaximumTakeOffMass][757.0]>
+        <[float64][WingSpan][10.4]>
+        <[float64][WingArea][11.6]>
+        <[float64][HeightOffset][-0.8249]>
+        <[float64][NoseWheelPositionX][1.202]>		
+        <[float64][ApproachSpeed][25.3]>
+        <[float64][PatternSpeed][33.3]>
+        <[float64][InitialClimbSpeed][28.3]>
+        <[copilot_flap_info_list][FlapInfo][]
+           <[copilot_flap_info][FlapUp][]
+              <[float64][FlapPosition][0.0]>
+              <[float64][MinimumSpeed][24.5]>
+              <[float64][OptimumSpeed][33.3]>
+              <[float64][MaximumSpeed][69.0]>
+              <[bool][TakeOff][true]>
+              <[bool][Landing][true]>
+           >
+           <[copilot_flap_info][FlapApproach][]
+              <[float64][FlapPosition][0.5]>
+              <[float64][MinimumSpeed][26.5]>
+              <[float64][OptimumSpeed][45.4]>
+              <[float64][MaximumSpeed][62.0]>
+              <[bool][TakeOff][true]>
+              <[bool][Landing][true]>
+           >
+           <[copilot_flap_info][FlapFull][]
+              <[float64][FlapPosition][1.0]>
+              <[float64][MinimumSpeed][28.5]>
+              <[float64][OptimumSpeed][50.0]>
+              <[float64][MaximumSpeed][69.0]>
+              <[bool][Landing][true]>
+           >
+        >		
+        <[string8][AutoPilotType][BASIC]>
+        <[bool][ParkingBrake][true]>
+        <[bool][RudderTrimRequired][true]>
+        <[float64][PitchTrimTakeOff][-0.02]>
+        <[float64][RudderSteeringGain][0.5]>
+        <[float64][RudderCrossWind][1.5]>
+        <[float64][YawTrimFactor][0.1]>
+        <[float64][FlareHeightScaling][0.5]>
+        <[float64][FlareExpectedNoseDrop][0.1]>
+    >
+>
