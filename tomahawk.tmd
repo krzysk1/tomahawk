@@ -506,7 +506,7 @@
             >
             <[linear_interpolation][FlapsMapping][]
                 <[string8][Input][FlapsInput.Output]>
-                <[tmvector2d][Map][ (0.0 0.00) (0.33 0.21) (0.67 0.34) (1.00 0.41) ]>
+                <[tmvector2d][Map][ (0.0 0.00) (0.33 0.366519) (0.67 0.593412) (1.00 0.715585) ]>
             >
             <[gated_lever][FlapLever][]
                 <[string8][Input][FlapsInput.Output]>
@@ -547,7 +547,7 @@
                 <[string8][Message][Aircraft.Flaps]>
             >
             <[sender][SenderFlapMaximum][]
-                <[string8][Input][0.873]>
+                <[string8][Input][0.715585]>
                 <[string8][Message][Aircraft.Flaps]>
                 <[string8][Qualifiers][maximum]>
             >
@@ -825,7 +825,7 @@
                 <[string8][Input][EngineRunningTime.Output]>
             >
             <[product][NormalizedPropellerSpeed][]
-                <[string8][Inputs][ DriveShaft.RotationSpeed 0.003537 ]> // = 1/RatedRotationSpeed
+                <[string8][Inputs][ DriveShaft.RotationSpeed 0.003846 ]>
             >
             <[sender][SenderPower][]
                 <[string8][Input][NormalizedPropellerSpeed.Output]>
@@ -861,7 +861,7 @@
             // engine fuel flow
             <[linear_interpolation][FuelFlow][]
                 <[string8][Input][DriveShaft.RotationSpeed]>
-                <[tmvector2d][Map][ (0.0 0.0) (52.4 0.004206) (104.0 0.0052575) (209.4 0.011) (282.7 0.0178755) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (52.4 0.004206) (104.0 0.0052575) (209.4 0.011) (260.0 0.0178755) ]>
             >
 //            <[needle][NeedleFuelFlow][]
 //                <[string8][Input][FuelFlow.Output]>
@@ -891,7 +891,7 @@
             // engine oil temperature
             <[linear_interpolation][OilTemperatureInput][]
                 <[string8][Input][DriveShaft.RotationSpeed]>
-                <[tmvector2d][Map][ (0.0 288.15) (52.4 310.9) (104.0 324.8) (209.4 349.8) (282.7 360.9) ]>
+                <[tmvector2d][Map][ (0.0 288.15) (52.4 310.9) (104.0 324.8) (209.4 349.8) (260.0 360.9) ]>
             >
             <[servoclassic][EngineOilTemperature][]
                 <[string8][Input][OilTemperatureInput.Output]>
@@ -932,7 +932,7 @@
             // engine vacuum or suction
             <[linear_interpolation][EngineVacuum][]
                 <[string8][Input][DriveShaft.RotationSpeed]>
-                <[tmvector2d][Map][ (0.0 0.0) (52.4 6772.0) (104.0 15237.0) (209.4 16930.0) (282.7 17945.8) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (52.4 6772.0) (104.0 15237.0) (209.4 16930.0) (260.0 17945.8) ]>
             >
             <[needle][NeedleEngineVacuum][]
                 <[string8][Input][EngineVacuum.Output]>
@@ -1797,7 +1797,7 @@
                 <[tmvector3d][Axis][1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][1.8841 0.0 0.1328]>
             >
-            <[graphics_propeller_blade][PropellerBlades][]
+            <[graphics_propeller_blade][PropellerBlade0][]
                 <[string8][GeometryList][ propeller ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
@@ -1809,7 +1809,19 @@
                 <[float64][Radius][1.0]>
                 <[string8][InputPitch][0.0]>
             >
-
+            <[graphics_propeller_blade][PropellerBlade1][]
+                <[string8][GeometryList][ propeller1 ]>
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][AngleID][Propeller.RotationAngle]>
+                <[uint32][RotationSpeedID][Propeller.RotationSpeed]>
+                <[uint32][DamageID][Propeller.Damaged]>
+                <[tmvector3d][Axis][1.0 0.0 0.0]>
+                <[tmvector3d][Pivot][1.8841 0.0 0.1328]>
+                <[float64][Radius][1.0]>
+                <[string8][InputPitch][0.0]>
+            >
+			
         // obj4 - Rudder pedals
             
             <[movinggraphics][LeftRudderPedals][]
