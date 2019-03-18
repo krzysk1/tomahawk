@@ -286,7 +286,7 @@
                 <[float64][AttachedCenter][0.0]>
                 <[float64][AttachedRange][0.139626]>
                 <[float64][StallRange][0.174533]>
-                <[float64][AttachedCenterFlap][-0.120]>
+                <[float64][AttachedCenterFlap][-0.12]>
             >
             <[airfoil][AirfoilVerticalStabilizer][]
                 <[float64][Cl0][0.0]>
@@ -306,7 +306,7 @@
                 <[float64][AttachedCenter][0.0]>
                 <[float64][AttachedRange][0.139626]>
                 <[float64][StallRange][0.174533]>
-                <[float64][AttachedCenterFlap][-0.120]>
+                <[float64][AttachedCenterFlap][-0.12]>
             >
             <[airfoil][AirfoilRoot][]
                 <[float64][Cl0][0.512]>
@@ -326,7 +326,7 @@
                 <[float64][AttachedCenter][0.017]>
                 <[float64][AttachedRange][0.25]>
                 <[float64][StallRange][0.15]>
-                <[float64][AttachedCenterFlap][-0.120]>
+                <[float64][AttachedCenterFlap][-0.12]>
             >
             <[airfoil][AirfoilTip][]
                 <[float64][Cl0][0.512]>
@@ -346,7 +346,7 @@
                 <[float64][AttachedCenter][0.017]>
                 <[float64][AttachedRange][0.25]>
                 <[float64][StallRange][0.15]>
-                <[float64][AttachedCenterFlap][-0.120]>
+                <[float64][AttachedCenterFlap][-0.12]>
             >
             <[aerowing][LeftWingAero][]
                 <[string8][Body][LeftWing]>
@@ -796,7 +796,7 @@
                 <[float64][InputTemperature] [EngineHousing.Output]>
                 <[float64][AddHeat]          [EngineHousing.AddHeat]>
                 <[float64][RotationInertia][1.1776]>
-                <[float64][ThrottleIdle][0.1]>
+                <[float64][ThrottleIdle][0.17]>
                 <[float64][Friction][50.0]>
                 <[float64][RatedRotationSpeed][260.0]>
                 <[float64][RatedPower][83518]>
