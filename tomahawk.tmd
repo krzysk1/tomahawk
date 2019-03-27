@@ -796,7 +796,7 @@
                 <[float64][InputTemperature] [EngineHousing.Output]>
                 <[float64][AddHeat]          [EngineHousing.AddHeat]>
                 <[float64][RotationInertia][1.1776]>
-                <[float64][ThrottleIdle][0.17]>
+                <[float64][ThrottleIdle][0.1]>
                 <[float64][Friction][50.0]>
                 <[float64][RatedRotationSpeed][260.0]>
                 <[float64][RatedPower][83518]>
@@ -1794,7 +1794,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][AngleID][Propeller.RotationAngle]>
-                <[tmvector3d][Axis][-1.0 0.0 0.0]>
+                <[tmvector3d][Axis][1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][1.8841 0.0 0.1328]>
             >
             <[graphics_propeller_blade][PropellerBlade0][]
@@ -1804,7 +1804,7 @@
                 <[uint32][AngleID][Propeller.RotationAngle]>
                 <[uint32][RotationSpeedID][Propeller.RotationSpeed]>
                 <[uint32][DamageID][Propeller.Damaged]>
-                <[tmvector3d][Axis][1.0 0.0 0.0]>
+                <[tmvector3d][Axis][-1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][1.8841 0.0 0.1328]>
                 <[float64][Radius][1.0]>
                 <[string8][InputPitch][0.0]>
@@ -1816,7 +1816,7 @@
                 <[uint32][AngleID][Propeller.RotationAngle]>
                 <[uint32][RotationSpeedID][Propeller.RotationSpeed]>
                 <[uint32][DamageID][Propeller.Damaged]>
-                <[tmvector3d][Axis][1.0 0.0 0.0]>
+                <[tmvector3d][Axis][-1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][1.8841 0.0 0.1328]>
                 <[float64][Radius][1.0]>
                 <[string8][InputPitch][0.0]>
@@ -3018,14 +3018,22 @@
             >
             <[texture_animation][DisplayTexture][]
                 <[string8][TextureName][gps_color]>
-                <[string8][RenderList][DisplayMap.Render]>
+                <[string8][RenderList][ DisplayMap.Render DisplayMapAircraft.Render ]>
             >
             <[texture_animation_map_display][DisplayMap][]
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[tmvector2d][TargetPosition][ 0 0 ]>
-                <[tmvector2d][TargetSize][ 256 256]>
-                <[tmvector2d][TargetScale][ 256 256 ]>
+               <[tmvector2d][TargetPosition][ 0 0 ]>
+                <[tmvector2d][TargetSize][ 512 512 ]>
+                <[tmvector2d][TargetScale][ 512 512 ]>
+            >
+            <[texture_animation_rectangle][DisplayMapAircraft][]
+                <[tmvector2d][TargetPosition][ 183 128 ]>
+                <[tmvector2d][TargetSize][ 10 64 ]>
+                <[tmvector2d][TargetScale][ 512 512 ]>
+                <[tmvector2d][SourcePosition][ 0 128 ]>
+                <[tmvector2d][SourceSize][ 256 256 ]>
+                <[tmvector2d][SourceScale][ 512 512 ]>
             >
         >
         <[pointer_list_tmsound][SoundObjects][]
