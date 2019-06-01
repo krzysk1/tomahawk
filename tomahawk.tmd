@@ -2,7 +2,7 @@
 
     //-------------------------------------
     // Plane: Piper Pa-38 Tomahawk
-	// Compilation: krzysk (at) wp.pl
+	// Compilation: Krzysztof Kaniewski
 	// 3D model: Adrian Fernandez Gomez (Alcala Simulacion)
 	// Date: Fri Dec 05 2014; Mar 2019 
     //-------------------------------------
@@ -476,7 +476,22 @@
                 <[float64][Cm][ 0.0 ]>
             >
 
-            <[input_default][AileronInput][]
+            <[input_binary][LeftYokeHidden][]
+                <[string8][Input][Controls.HideYoke.Left]>
+                <[float64][Value][0.0]>
+            >
+            <[output_free][LeftYokeHiddenOutput][]
+                <[string8][Input][LeftYokeHidden.Output]>
+            >
+            <[input_binary][RightYokeHidden][]
+                <[string8][Input][Controls.HideYoke.Right]>
+                <[float64][Value][0.0]>
+            >
+            <[output_free][RightYokeHiddenOutput][]
+                <[string8][Input][RightYokeHidden.Output]>
+            >
+			
+            <[input_control][AileronInput][]
                 <[tmvector2d][Range][ -1.0 1.0 ]>
                 <[string8][Input][Controls.Roll.Input]>
             >
@@ -484,7 +499,7 @@
                 <[string8][Input][AileronInput.Output]>
                 <[string8][Message][Aircraft.Aileron]>
             >
-            <[input_default][ElevatorInput][]
+            <[input_control][ElevatorInput][]
                 <[tmvector2d][Range][ -1.0 1.0 ]>
                 <[string8][Input][Controls.Pitch.Input]>
             >
@@ -500,9 +515,11 @@
                 <[string8][Input][RudderInput.Output]>
                 <[string8][Message][Aircraft.Rudder]>
             >
-            <[input_default][FlapsInput][]
+            <[input_lever][FlapsInput][]
                 <[string8][Input][Controls.Flaps]>
-                <[uint][Positions][4]>                
+                <[tmvector2d][Range][ 0.0 1.0 ]>				
+                <[uint][Positions][4]>  
+                <[float64][Value][0.0]>				
             >
             <[linear_interpolation][FlapsMapping][]
                 <[string8][Input][FlapsInput.Output]>
@@ -624,10 +641,8 @@
             <[servoclassic][ServoLeftAileron][]
                 <[string8][Input][AileronTrimmed.Output]>
                 <[float64][Speed][2.0]>
-                <[float64][P0][0.0]>
                 <[float64][P1][0.453786]>
                 <[float64][P2][-0.209440]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoLeftAileronOutput][]
                 <[string8][Input][ServoLeftAileron.Output]>
@@ -635,10 +650,8 @@
             <[servoclassic][ServoRightAileron][]
                 <[string8][Input][AileronTrimmed.Output]>
                 <[float64][Speed][2.0]>
-                <[float64][P0][0.0]>
                 <[float64][P1][-0.453786]>
                 <[float64][P2][-0.209440]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoRightAileronOutput][]
                 <[string8][Input][ServoRightAileron.Output]>
@@ -646,10 +659,8 @@
             <[servoclassic][ServoElevator][]
                 <[string8][Input][ElevatorTrimmed.Output]>
                 <[float64][Speed][10.0]>
-                <[float64][P0][0.0]>
                 <[float64][P1][0.593412]>
                 <[float64][P2][-0.244346]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoElevatorOutput][]
                 <[string8][Input][ServoElevator.Output]>
@@ -657,10 +668,7 @@
             <[servoclassic][ServoElevatorTrim][]
                 <[string8][Input][ElevatorTrimInput.Output]>
                 <[float64][Speed][0.1]>
-                <[float64][P0][0.0]>
                 <[float64][P1][0.174533]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoElevatorTrimOutput][]
                 <[string8][Input][ServoElevatorTrim.Output]>
@@ -668,10 +676,7 @@
             <[servoclassic][ServoRudder][]
                 <[string8][Input][RudderTrimmed.Output]>
                 <[float64][Speed][5.0]>
-                <[float64][P0][0.0]>
                 <[float64][P1][0.506145]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoRudderOutput][]
                 <[string8][Input][ServoRudder.Output]>
@@ -679,31 +684,18 @@
             <[servoclassic][ServoPedals][]
                 <[string8][Input][RudderInput.Output]>
                 <[float64][Speed][5.0]>
-                <[float64][P0][0.0]>
                 <[float64][P1][1.0]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoPedalsOutput][]
                 <[string8][Input][ServoPedals.Output]>
             >
-            <[servoclassic][ServoRudderTrim][]
-                <[string8][Input][RudderTrimInput.Output]>
-                <[float64][Speed][100.0]>
-                <[float64][P0][0.0]>
-                <[float64][P1][0.0]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
-            >
-            <[output_free][ServoRudderTrimOutput][]
-                <[string8][Input][ServoRudderTrim.Output]>
-            >
+
             <[servolinear][SteerTransitionSpeed][]
                 <[string8][Input][AirspeedIndicator.IndicatedAirspeed]>
                 <[float64][OutputSpeed][10.0]>
                 <[float64][Position][0.0]>
                 <[float64array][InputPosition][ 55.6 56.6 ]>
-                <[float64array][OutputPosition][ 1.0 0.5000 ]>
+                <[float64array][OutputPosition][ 1.0 0.5 ]>
             >
             <[output_free][SteerTransitionSpeedOutput][]
                 <[string8][Input][SteerTransitionSpeed.Output]>
@@ -714,10 +706,7 @@
             <[servoclassic][ServoSteering][]
                 <[string8][Input][SteeringProduct.Output]>
                 <[float64][Speed][4.0]>
-                <[float64][P0][0.0]>
                 <[float64][P1][1.0]> // 0.523599]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoSteeringOutput][]
                 <[string8][Input][ServoSteering.Output]>
@@ -959,10 +948,7 @@
             <[servoclassic][ServoThrottle][]
                 <[string8][Input][ThrottleInput.Output]>
                 <[float64][Speed][15.0]>
-                <[float64][P0][0.0]>
                 <[float64][P1][1.0]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
                 <[float64][Position][0.0]>
             >
             <[output_free][ServoThrottleOutput][]
@@ -1005,6 +991,7 @@
             <[output_free][StarterActiveOutput][][]
                 <[string8][Input][StarterActive.Output]>
             >
+			
             // engines end
 			
             // instruments start            
@@ -1490,7 +1477,20 @@
             >
             <[output_free][RightSunBlockerOutput][]
                 <[string8][Input][RightSunBlocker.Output]>
-            >			
+            >
+			
+			// door
+            <[servolinear][ServoDoor][]
+                <[string8][Input][AirspeedIndicator.IndicatedAirspeed]>
+                <[float64][OutputSpeed][0.5]>
+                <[float64][Position][0.0]>
+                <[float64array][InputPosition][ 1.0 2.0 ]>
+                <[float64array][OutputPosition][ 1.0 0.0 ]>
+            >
+            <[output_free][ServoDoorOutput][]
+                <[string8][Input][ServoDoor.Output]>
+            >
+			
             // animations end
             
             // sound events
@@ -1786,7 +1786,8 @@
                 <[uint32][BladeNumber][2]>
                 <[float64][Radius][1.0]>
                 <[float64][BladePitch][-0.5]>
-                <[float64][RotationSpeedFade][10.0]>
+                <[float64][RotationSpeedFade][45.0]>
+                <[uint32][NumberStops][0]>
             >
 
             <[rotatingbodygraphics][PropellerCone][]
@@ -2107,7 +2108,7 @@
             >
             // mixture_ratio
             <[graphics_input][CockpitInput_0][]
-                <[uint32][InputID][ServoMixture.Output]>
+                <[uint32][InputID][Mixture.Output]>
             >
             <[graphics_mapping][CockpitMapping_283][]
                 <[string8][Input][CockpitInput_0.Output]>
@@ -2499,8 +2500,7 @@
             >
             // ignition_key
             <[graphics_input][CockpitInput_27][]
-                <[uint32][InputID][IgnitionSwitch.Output]>
-                <[float64][Scaling][4]>
+                <[uint32][InputID][Magnetos.Output]>
             >
             <[graphics_mapping][CockpitMapping_470][]
                 <[string8][Input][CockpitInput_27.Output]>
@@ -2514,90 +2514,93 @@
                 <[tmvector3d][Axis][-1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][0.3198 0.3381 0.0285]>
             >
-//        <[string8][object][rigidbodygraphics]
-//            <[string8][Name][CanopyHandle]>
-//            <[string8][GeometryList][ pa-38_tomahawk_cockpit_25278_15 pa-38_tomahawk_cockpit_25422_15 ]>
-//            <[string8][GeometryList][ pa-38_tomahawk_cockpit_25530_15 pa-38_tomahawk_cockpit_25674_15 ]>
-//            <[uint32][PositionID][Fuselage.R]>
-//            <[uint32][OrientationID][Fuselage.Q]>
-//        >
 
             // Failures fuses
             <[rigidbodygraphics][FailuresFuses][]
                 <[string8][GeometryList][ pa-38_tomahawk_cockpit_25782_15 pa-38_tomahawk_cockpit_26160_15 pa-38_tomahawk_cockpit_26538_15 pa-38_tomahawk_cockpit_26916_15 pa-38_tomahawk_cockpit_27294_15 pa-38_tomahawk_cockpit_27672_15 pa-38_tomahawk_cockpit_28050_15 pa-38_tomahawk_cockpit_28428_15 pa-38_tomahawk_cockpit_28806_15 pa-38_tomahawk_cockpit_29184_15 pa-38_tomahawk_cockpit_29562_15 pa-38_tomahawk_cockpit_29940_15 pa-38_tomahawk_cockpit_30318_15 pa-38_tomahawk_cockpit_30696_15 pa-38_tomahawk_cockpit_31074_15 pa-38_tomahawk_cockpit_31452_15 pa-38_tomahawk_cockpit_20298_15 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-       //         <[string8][InputTransform][CockpitMoving_544.Output]>
             >
 
             // Yokes
-            <[graphics_input][CockpitInput_44][]
+            <[graphics_input][LeftYokeHidden][]
+                <[uint32][InputID][LeftYokeHidden.Output]>
+                <[float64][Scaling][0.4]>
+            >			
+            <[graphics_input][StickAileronTransformInput][]
                 <[uint32][InputID][ServoLeftAileron.Output]>
                 <[float64][Scaling][2.2037]>
             >
-            <[graphics_input][CockpitInput_444][]
+            <[graphics_input][StickBaseTransformInput][]
                 <[uint32][InputID][ServoElevator.Output]>
                 <[float64][Scaling][1.6852]>
             >
-// 15,PA-38_Tomahawk_cockpit,ANIM_trans_begin,1,sim/flightmodel2/wing/elevator1_deg
-// 15,PA-38_Tomahawk_cockpit,ANIM_trans_key,1,20.0,-0.2898,0.1512,1.5176
-// 15,PA-38_Tomahawk_cockpit,ANIM_trans_key,1,0.0,-0.2898,0.1512,1.5719
-// 15,PA-38_Tomahawk_cockpit,ANIM_trans_key,1,-34.0,-0.2898,0.1512,1.6823
-// 15,PA-38_Tomahawk_cockpit,ANIM_trans,2,0.0000,0.0000,0.1786,0.0000,0.0000,0.1786,0,0,no_ref
-            <[graphics_mapping][CockpitMapping_558][]
-                <[string8][Input][CockpitInput_444.Output]>
+            <[graphics_mapping][LeftStickBaseTransformMapping][]
+                <[string8][Input][StickBaseTransformInput.Output]>
                 <[tmvector2d][Map][(-1.0 -0.1104) (0.0 0.0) (1.0 0.0543) ]>
             >
-            <[graphics_translation][CockpitMoving_558][]
-                <[string8][Input][CockpitMapping_558.Output]>
-                <[tmvector3d][Axis][1.0 0.0 0.00]>
+            <[graphics_mix][StickBaseTransformMix][]
+                <[uint32][Input0][LeftStickBaseTransformMapping.Output]>
+                <[uint32][Input1][LeftYokeHidden.Output]>
+                <[uint32][Weight0][1.0]>
+                <[uint32][Weight1][1.0]>
+                <[uint32][Offset][0.0]>
+            >			
+            <[graphics_translation][LeftStickBaseTransform][]
+                <[string8][Input][StickBaseTransformMix.Output]>
+                <[tmvector3d][Axis][1.0 0.0 0.0]>
             >
-            <[graphics_mapping][CockpitMapping_559][]
-                <[string8][Input][CockpitInput_44.Output]>
+            <[graphics_mapping][StickAileronTransformMapping][]
+                <[string8][Input][StickAileronTransformInput.Output]>
                 <[tmvector2d][Map][(-1.0 1.047198) (0.0 0.0) (1.0 -1.047198) ]>
             >
-            <[graphics_rotation][CockpitRotate_559][]
-                <[string8][InputAngle][CockpitMapping_559.Output]>
+            <[graphics_rotation][LeftStickAileronRotate][]
+                <[string8][InputAngle][StickAileronTransformMapping.Output]>
                 <[tmvector3d][Axis][1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][1.9214 0.2923 0.1512]>
-                <[string8][InputTransform][CockpitMoving_558.Output]>
+                <[string8][InputTransform][LeftStickBaseTransform.Output]>
             >
             <[rigidbodygraphics][PilotYoke][]
                 <[string8][GeometryList][ pa-38_tomahawk_cockpit_31830_15 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[string8][InputTransform][CockpitRotate_559.Output]>
+                <[string8][InputTransform][LeftStickAileronRotate.Output]>
             >
 
-// 15,PA-38_Tomahawk_cockpit,ANIM_trans_begin,1,sim/flightmodel2/wing/elevator1_deg
-// 15,PA-38_Tomahawk_cockpit,ANIM_trans_key,1,20.0,0.2923,0.1512,1.4894
-// 15,PA-38_Tomahawk_cockpit,ANIM_trans_key,1,0.0,0.2923,0.1512,1.5403
-// 15,PA-38_Tomahawk_cockpit,ANIM_trans_key,1,-34.0,0.2923,0.1512,1.6533
-// 15,PA-38_Tomahawk_cockpit,ANIM_trans,2,0.0000,0.0000,0.2068,0.0000,0.0000,0.2068,0,0,no_ref
-
-            <[graphics_mapping][CockpitMapping_574][]
-                <[string8][Input][CockpitInput_444.Output]>
+            <[graphics_mapping][RightStickBaseTransformMapping][]
+                <[string8][Input][StickBaseTransformInput.Output]>
                 <[tmvector2d][Map][(-1.0 -0.113) (0.0 0.0) (1.0 0.0509) ]>
             >
-            <[graphics_translation][CockpitMoving_574][]
-                <[string8][Input][CockpitMapping_574.Output]>
-                <[tmvector3d][Axis][1.0 0.0 0.00]>
+            <[graphics_input][RightYokeHidden][]
+                <[uint32][InputID][RightYokeHidden.Output]>
+                <[float64][Scaling][0.4]>
             >
-            <[graphics_mapping][CockpitMapping_575][]
-                <[string8][Input][CockpitInput_44.Output]>
+            <[graphics_mix][RightStickBaseTransformMix][]
+                <[uint32][Input0][RightStickBaseTransformMapping.Output]>
+                <[uint32][Input1][RightYokeHidden.Output]>
+                <[uint32][Weight0][1.0]>
+                <[uint32][Weight1][1.0]>
+                <[uint32][Offset][0.0]>
+            >		
+            <[graphics_translation][RightStickBaseTransform][]
+                <[string8][Input][RightStickBaseTransformMix.Output]>
+                <[tmvector3d][Axis][1.0 0.0 0.0]>
+            >
+            <[graphics_mapping][RightStickAileronMapping][]
+                <[string8][Input][StickAileronTransformInput.Output]>
                 <[tmvector2d][Map][(-1.0 1.047198) (0.0 0.0) (1.0 -1.047198) ]>
             >
-            <[graphics_rotation][CockpitRotate_575][]
-                <[string8][InputAngle][CockpitMapping_575.Output]>
+            <[graphics_rotation][RightStickAileronRotate][]
+                <[string8][InputAngle][RightStickAileronMapping.Output]>
                 <[tmvector3d][Axis][1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][1.8932 -0.2898 0.1512]>
-                <[string8][InputTransform][CockpitMoving_574.Output]>
+                <[string8][InputTransform][RightStickBaseTransform.Output]>
             >
             <[rigidbodygraphics][CopilotYoke][]
                 <[string8][GeometryList][ pa-38_tomahawk_cockpit_46500_15 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[string8][InputTransform][CockpitRotate_575.Output]>
+                <[string8][InputTransform][RightStickAileronRotate.Output]>
             >
             // fuel_tank_selector
             <[graphics_input][CockpitInput_45][]
@@ -2678,7 +2681,7 @@
             >
 
 
-        // obj3 - Pilot
+        // Pilot animation
 
             <[rigidbodygraphics][obj3_5][]
                 <[string8][GeometryList][ obj3_5 ]>
@@ -2733,7 +2736,7 @@
                 <[uint32][ShowInside][9]>
             >
 
-        // obj3c - Copilot
+        // Copilot animation
 
             <[rigidbodygraphics][obj3c_7][]
                 <[string8][GeometryList][ obj3c_7 ]>
@@ -2783,7 +2786,6 @@
             >
 
         // Gauges animations
-
 
             // Airspeed gauge
             <[graphics_input][AirspeedIndicatorInput][]

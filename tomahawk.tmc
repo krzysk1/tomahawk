@@ -4,7 +4,7 @@
         <[vec32array][ContactSpheres][ (1.202 0.0 -0.921 0.1767) (-0.312 1.296 -0.939 0.183) (-0.312 -1.296 -0.939 0.183) ]>
         <[string8][DisplayName][Piper PA-38 Tomahawk]>
         <[string8][DescriptionTextEN][The Piper PA-38-112 Tomahawk is a two-seat, fixed tricycle gear general aviation airplane, originally designed for flight training, touring and personal use.  
-		Made by Krzysztof Kaniewski. 3D model by Adrian Fernandez Gomez (www.alcala-sim.com).]>
+For Aerofly FS2 made by Krzysztof Kaniewski. Original 3D model created by Adrian Fernandez Gomez (www.alcala-sim.com).]>
 		<[float64][WingSpan][10.4]>
 		<[float64][Mass][575]>
 		<[float64][MaximumSpeed][69.0]>
@@ -24,7 +24,7 @@
         <[float64][QRange][867000.0]>
         <[float64][QRatio][0.0]>
         <[float64][QBuild][2484]>
-        <[float64][QVirgin][1972]>
+        <[float64][QVirgin][1978]>
 		<[bool][Airplane][true]>
 		<[bool][Flaps][true]>
         <[string8][Pilot][]>
