@@ -9,3 +9,5 @@ This is free add-on for Aerofly FS2 developed by Krzysztof Kaniewski, 3D model b
 Installation
 
 1. Unzip file and move the folder "tomahawk" to C:\Users\~\Documents\Aerofly FS2\aircraft.
+
+Aircraft Technical Data & Specifications: http://www.airliners.net/aircraft-data/piper-pa-38-tomahawk/309
