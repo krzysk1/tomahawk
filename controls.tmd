@@ -15,8 +15,7 @@
                 >
                 <[float64][Radius][0.006]>
                 <[float64][Length][0.012]>
-            >
-			
+            >			
 			// throttle
             <[control_input][ThrottleLeverAngle][]
                 <[uint32][InputID][ServoThrottle.Output]>
@@ -232,7 +231,20 @@
                 <[float64][Start][3.7]>
                 <[float64][End][6.2]>
             >
-			
+			// map zoom
+            <[control_box][MapZoomKnob][85]
+                <[string8][Type][knob]>
+                <[vector3_float64][R0][0.3274 -0.1366 0.2450]>
+                <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
+                <[vector3_float64][Direction][ 1.0 0.0 0.0 ]>
+                <[float64][StepAngle][0.3]>			
+                <[control_message][OnRotate][]
+                    <[string8][Message][Map.Zoom]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][0.5]>
+                >
+                <[vector3_float64][Dimensions][0.01 0.1 0.07]>
+            >			
 			// flap lever
             <[control_input][FlapLeverInput][]
                 <[uint32][InputID][FlapLever.Output]>

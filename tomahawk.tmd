@@ -275,7 +275,7 @@
                 <[float64][ClAlpha][6.28]>
                 <[float64][CdAlpha][0.4]>
                 <[float64][CmAlpha][0.0]>
-                <[float64][ClFlap][1.5]>
+                <[float64][ClFlap][2.1]>
                 <[float64][CdFlap][0.0]>
                 <[float64][CmFlap][-0.02]>
                 <[float64][Cd0Base][0.005]>
@@ -295,7 +295,7 @@
                 <[float64][ClAlpha][6.280]>
                 <[float64][CdAlpha][0.4]>
                 <[float64][CmAlpha][0.0]>
-                <[float64][ClFlap][1.5]>
+                <[float64][ClFlap][2.1]>
                 <[float64][CdFlap][0.0]>
                 <[float64][CmFlap][-0.02]>
                 <[float64][Cd0Base][0.005]>
@@ -315,7 +315,7 @@
                 <[float64][ClAlpha][6.28]>
                 <[float64][CdAlpha][0.4]>
                 <[float64][CmAlpha][-0.2]>
-                <[float64][ClFlap][0.611]>
+                <[float64][ClFlap][1.611]>
                 <[float64][CdFlap][0.12]>
                 <[float64][CmFlap][-0.611]>
                 <[float64][Cd0Base][0.005]>
@@ -335,7 +335,7 @@
                 <[float64][ClAlpha][6.28]>
                 <[float64][CdAlpha][0.4]>
                 <[float64][CmAlpha][-0.2]>
-                <[float64][ClFlap][0.611]>
+                <[float64][ClFlap][1.2]>
                 <[float64][CdFlap][0.12]>
                 <[float64][CmFlap][-0.611]>
                 <[float64][Cd0Base][0.005]>
@@ -1478,7 +1478,15 @@
             <[output_free][RightSunBlockerOutput][]
                 <[string8][Input][RightSunBlocker.Output]>
             >
-			
+			// GPS zoom
+            <[input_discrete][MapZoom][]
+                <[string8][Input][Map.Zoom]>
+                <[tmvector2d][Range][ -2.0 8.0 ]>
+                <[float64][Value][1.0]>
+            >
+            <[output_free][MapZoomOutput][]
+                <[string8][Input][MapZoom.Output]>
+            >			
 			// door
             <[servolinear][ServoDoor][]
                 <[string8][Input][AirspeedIndicator.IndicatedAirspeed]>
@@ -3019,23 +3027,27 @@
                 <[uint32][OrientationID][Fuselage.Q]>
             >
             <[texture_animation][DisplayTexture][]
-                <[string8][TextureName][gps_color]>
+                <[string8][TextureName][gps_color]>			
                 <[string8][RenderList][ DisplayMap.Render DisplayMapAircraft.Render ]>
             >
+            <[graphics_input][MapZoom][]
+                <[uint32][InputID][MapZoom.Output]>
+            >			
             <[texture_animation_map_display][DisplayMap][]
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                <[tmvector2d][TargetPosition][ 0 0 ]>
                 <[tmvector2d][TargetSize][ 512 512 ]>
                 <[tmvector2d][TargetScale][ 512 512 ]>
+                <[string8][InputZoom][MapZoom.Output]>				
             >
             <[texture_animation_rectangle][DisplayMapAircraft][]
-                <[tmvector2d][TargetPosition][ 183 128 ]>
-                <[tmvector2d][TargetSize][ 10 64 ]>
+                <[tmvector2d][TargetPosition][ 251 256 ]>
+                <[tmvector2d][TargetSize][ 10 10 ]>
                 <[tmvector2d][TargetScale][ 512 512 ]>
-                <[tmvector2d][SourcePosition][ 0 128 ]>
-                <[tmvector2d][SourceSize][ 256 256 ]>
-                <[tmvector2d][SourceScale][ 512 512 ]>
+                <[tmvector2d][SourcePosition][ 0 64 ]>
+                <[tmvector2d][SourceSize][ 64 64 ]>
+                <[tmvector2d][SourceScale][ 512 512 ]>		
             >
         >
         <[pointer_list_tmsound][SoundObjects][]
