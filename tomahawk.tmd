@@ -1074,6 +1074,9 @@
                 <[float64][Limit][0.02]>
                 <[float64][Damping][4.0]>
             >
+            <[output][BalanceIndicatorDeflection][]
+                <[string8][Input][BalanceIndicator.Output]>
+            >			
             <[magnetic_compass][MagneticCompass][]
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ 0.11615 0.0041 0.7311 ]>
@@ -2883,10 +2886,16 @@
                 <[tmvector3d][Axis][1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][0.3332 0.3637 0.2513]>
             >
-            <[rigidbodygraphics][BalanceIndicatorBall][]
+            <[hingedbodygraphics][BalanceIndicatorBall][]
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
                 <[string8][GeometryList][ BallNeedle ]>
-                <[uint32][PositionID][BalanceIndicatorBall.R]>
-            >
+                <[tmvector3d][Axis][ -1.0 0.0 0.0 ]>
+                <[tmvector3d][Pivot][ 0.3333 0.3637 0.5342 ]>
+                <[float64][AngleMax][0.17]>
+                <[string8][AngleID][BalanceIndicatorDeflection.Output]>
+            >			
+
             // CLOCK gauge
             <[graphics_input][LocalTime][]
                 <[uint32][InputID][LocalTime.Output]>
