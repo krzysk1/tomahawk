@@ -1524,7 +1524,7 @@
                 <[tmvector3d][R0][-0.1330 5.3668 0.1509]>
                 <[tmvector3d][X0][ 0.7 0.7 0.0 ]>
                 <[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
-                <[float64][Brightness][ 2.0 ]>
+                <[float64][Brightness][ 3.0 ]>
                 <[string8][InputModulation][NavigationLightOn.Output]>
             >
             <[graphics_pointlight][RightWingTipLight][]
@@ -1533,7 +1533,7 @@
                 <[tmvector3d][R0][-0.1231 -5.3420 0.1518]>
                 <[tmvector3d][X0][ 0.7 -0.7 0.0 ]>
                 <[tmvector3d][Color][ 0.2 0.7 0.1 1.0 ]>
-                <[float64][Brightness][ 2.0 ]>
+                <[float64][Brightness][ 3.0 ]>
                 <[string8][InputModulation][NavigationLightOn.Output]>
             >
             <[graphics_pointlight][TailLight][]
@@ -1542,7 +1542,7 @@
                 <[tmvector3d][R0][-5.3438 0.0 1.5418]>
                 <[tmvector3d][X0][ -1.0 0.0 0.0 ]>
                 <[tmvector3d][Color][ 1.0 1.0 1.0 1.0 ]>
-                <[float64][Brightness][2.0]>
+                <[float64][Brightness][3.0]>
                 <[string8][InputModulation][NavigationLightOn.Output]>
                 <[string8][InputTransform][obj1Rotate_15.Output]>
             >
@@ -1558,7 +1558,7 @@
                 <[float64][ConeCutoff][0.2]>
                 <[float64][Size][0.025]>
                 <[tmvector3d][Color][ 1.0 0.9 0.8 1.0 ]>
-                <[float64][Brightness][10.0]>
+                <[float64][Brightness][12.0]>
                 <[string8][InputModulation][LandingLightOn.Output]>
             >
             // strobe lights
@@ -1587,7 +1587,7 @@
                 <[float64][Size][0.01]>
                 <[float64][ConeCenter][0.0]>
                 <[float64][ConeCutoff][-0.5]>
-                <[float64][Brightness][10.0]>
+                <[float64][Brightness][15.0]>
             >
             <[graphics_pointlight][RightStrobeLight][]
                 <[uint32][PositionID][RightWing.R]>
@@ -1599,7 +1599,7 @@
                 <[float64][Size][0.01]>
                 <[float64][ConeCenter][0.0]>
                 <[float64][ConeCutoff][-0.5]>
-                <[float64][Brightness][10.0]>
+                <[float64][Brightness][15.0]>
             >
 
         // obj1 - Fuselage
@@ -1770,18 +1770,18 @@
             <[torsionlinkgraphics][FrontGearLink][]
                 <[string8][Graphics0][FrontGearUpper]>
                 <[string8][Graphics1][FrontGear]>
-                <[tmvector3f][Joint0][ 1.0705 -0.0028 -0.4937 ]>
-                <[tmvector3f][Joint1][ 1.1078 -0.0028 -0.6648 ]>
-                <[tmvector3f][Joint2][ 0.9786 -0.0028 -0.5872 ]>
+                <[tmvector3f][Joint0][ 1.0715 0.0 -0.4935 ]>
+                <[tmvector3f][Joint1][ 1.1139 0.0 -0.6953 ]>  
+                <[tmvector3f][Joint2][ 1.0013 0.0 -0.6108 ]>   
                 <[string8][GeometryList][ Obj1378810 ]>
                 <[uint32][AttachTo][0]>
             >
             <[torsionlinkgraphics][FrontGearLink2][]
                 <[string8][Graphics0][FrontGearUpper]>
                 <[string8][Graphics1][FrontGear]>
-                <[tmvector3f][Joint0][ 1.0705 -0.0028 -0.4937 ]>
-                <[tmvector3f][Joint1][ 1.1078 -0.0028 -0.6648 ]>
-                <[tmvector3f][Joint2][ 0.9786 -0.0028 -0.5872 ]>
+                <[tmvector3f][Joint0][ 1.0715 0.0 -0.4935 ]>
+                <[tmvector3f][Joint1][ 1.1139 0.0 -0.6953 ]>  
+                <[tmvector3f][Joint2][ 1.0013 0.0 -0.6108 ]>   
                 <[string8][GeometryList][ Obj1380250 ]>
                 <[uint32][AttachTo][1]>
             >
@@ -2112,8 +2112,8 @@
 
         // PA-38_Tomahawk_cockpit
 
-            <[rigidbodygraphics][Cockpit_15][]
-                <[string8][GeometryList][ Pa38TomahawkCockpit15 Pa38TomahawkCockpit50415 Pa38TomahawkCockpit1144815 Pa38TomahawkCockpit1193415 Pa38TomahawkCockpit1570215 Pa38TomahawkCockpit1575015 Pa38TomahawkCockpit1715415 ]>    // instrument glass
+            <[rigidbodygraphics][CockpitPanel][]
+                <[string8][GeometryList][ Pa38TomahawkCockpit15 Pa38TomahawkCockpit50415 Pa38TomahawkCockpit1144815 Pa38TomahawkCockpit1193415 Pa38TomahawkCockpit1570215 Pa38TomahawkCockpit1575015 Pa38TomahawkCockpit1715415 Pa38TomahawkCockpitPreview ]>    // instrument glass
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
             >

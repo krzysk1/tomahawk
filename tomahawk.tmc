@@ -25,6 +25,8 @@ For Aerofly FS2 made by Krzysztof Kaniewski. Original 3D model created by Adrian
         <[float64][QRatio][0.0]>
         <[float64][QBuild][2484]>
         <[float64][QVirgin][1978]>
+        <[tmvector2d][FlapSettings][ (0.0 0.00) (0.33 0.366519) (0.67 0.593412) (1.00 0.715585) ]>
+        <[string8][FlapQualifier][]>		
 		<[bool][Airplane][true]>
 		<[bool][Flaps][true]>
         <[string8][Pilot][]>
