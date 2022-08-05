@@ -1,9 +1,9 @@
 ﻿<[file][][]
     <[object][][]
         <[int][Version][220]>
-        <[vec32array][ContactSpheres][ (1.202 0.0 -0.921 0.1767) (-0.312 1.296 -0.939 0.183) (-0.312 -1.296 -0.939 0.183) ]>
-        <[string8][ICAO][E300]>
-        <[string8][DisplayName][Piper PA-38 Tomahawk]>
+        <[vec32array][ContactSpheres][ (1.203 0.0 -0.9213 0.178) (-0.3125 -1.33 -0.9397 0.178) (-0.3125 1.33 -0.9397 0.178) ]>
+        <[string8][ICAO][PA38]>
+        <[string8][DisplayName][PA-38 Tomahawk]>
         <[string8][DisplayNameFull][Piper PA-38 Tomahawk]>
         <[localized_text_list][Descriptions][]
             <[localized_text][][]
