@@ -1502,8 +1502,34 @@
                 <[tmvector3d][R0][-0.1330 5.3668 0.1509]>
                 <[tmvector3d][X0][ 0.7 0.7 0.0 ]>
                 <[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
-                <[float64][Brightness][ 3.0 ]>
+                <[float64][Brightness][ 10.0 ]>
                 <[string8][InputModulation][NavigationLightOn.Output]>
+            >
+            <[graphics_conelight][LeftWingTipLightCone][]
+                <[uint32][PositionID][LeftWing.R]>
+                <[uint32][OrientationID][LeftWing.Q]>
+                <[tmvector3d][R0][-0.1330 5.3668 0.1509]>
+                <[tmvector3d][X0][ 0.7 0.7 0.0 ]>
+                <[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
+                <[float64][Brightness][ 0.1 ]>
+                <[float64][ConeCenter][1.0]>
+                <[float64][ConeCutoff][-0.91]>
+                <[string8][InputModulation][NavigationLightOn.Output]>
+                <[float64][Size][50.0]>
+                <[float64][Falloff][8.0]>
+            >
+            <[graphics_conelight][LeftWingTipLightGlow][]
+                <[uint32][PositionID][LeftWing.R]>
+                <[uint32][OrientationID][LeftWing.Q]>
+                <[tmvector3d][R0][-0.1330 5.3668 0.1509]>
+                <[tmvector3d][X0][ 1.0 0.1 0.0 ]>
+                <[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
+                <[float64][Brightness][ 0.5 ]>
+                <[float64][ConeCenter][-0.89]>
+                <[float64][ConeCutoff][-0.99]>
+                <[string8][InputModulation][NavigationLightOn.Output]>
+                <[float64][Size][1.0]>
+                <[float64][Falloff][8.0]>
             >
             <[graphics_pointlight][RightWingTipLight][]
                 <[uint32][PositionID][RightWing.R]>
@@ -1511,8 +1537,21 @@
                 <[tmvector3d][R0][-0.1231 -5.3420 0.1518]>
                 <[tmvector3d][X0][ 0.7 -0.7 0.0 ]>
                 <[tmvector3d][Color][ 0.2 0.7 0.1 1.0 ]>
-                <[float64][Brightness][ 3.0 ]>
+                <[float64][Brightness][ 10.0 ]>
                 <[string8][InputModulation][NavigationLightOn.Output]>
+            >
+            <[graphics_conelight][RightWingTipLightCone][]
+                <[uint32][PositionID][RightWing.R]>
+                <[uint32][OrientationID][RightWing.Q]>
+                <[tmvector3d][R0][-0.1231 -5.3420 0.1518]>
+                <[tmvector3d][X0][ 0.7 -0.7 0.0 ]>
+                <[tmvector3d][Color][ 0.2 0.7 0.1 1.0 ]>
+                <[float64][Brightness][ 0.1 ]>
+                <[float64][ConeCenter][1.0]>
+                <[float64][ConeCutoff][0.0]>
+                <[string8][InputModulation][NavigationLightOn.Output]>
+                <[float64][Size][50.0]>
+                <[float64][Falloff][8.0]>
             >
             <[graphics_pointlight][TailLight][]
                 <[uint32][PositionID][Fuselage.R]>
@@ -1520,9 +1559,24 @@
                 <[tmvector3d][R0][-5.3438 0.0 1.5418]>
                 <[tmvector3d][X0][ -1.0 0.0 0.0 ]>
                 <[tmvector3d][Color][ 1.0 1.0 1.0 1.0 ]>
-                <[float64][Brightness][3.0]>
+                <[float64][Brightness][6.0]>
+                <[float64][ConeCenter][0.2]>
+                <[float64][ConeCutoff][-0.2]>
                 <[string8][InputModulation][NavigationLightOn.Output]>
                 <[string8][InputTransform][obj1Rotate_15.Output]>
+            >
+            <[graphics_conelight][TailLightCone][]
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[tmvector3d][R0][-5.3438 0.0 1.5418]>
+                <[tmvector3d][X0][ -1.0 0.0 -0.2 ]>
+                <[tmvector3d][Color][ 1.0 0.8 0.6 1.0 ]>
+                <[float64][Brightness][ 0.1 ]>
+                <[float64][ConeCenter][0.5]>
+                <[float64][ConeCutoff][-0.5]>
+                <[string8][InputModulation][NavigationLightOn.Output]>
+                <[float64][Size][50.0]>
+                <[float64][Falloff][8.0]>
             >
             // landing lights
             <[graphics_input][LandingLightOn][]
@@ -1532,12 +1586,39 @@
                 <[uint32][PositionID][LeftWing.R]>
                 <[uint32][OrientationID][LeftWing.Q]>
                 <[tmvector3d][R0][ 1.6366 0.0 -0.1275 ]>
-                <[float64][ConeCenter][0.4]>
-                <[float64][ConeCutoff][0.2]>
-                <[float64][Size][0.025]>
-                <[tmvector3d][Color][ 1.0 0.9 0.8 1.0 ]>
-                <[float64][Brightness][12.0]>
+                <[tmvector3d][X0][ 1.0 0.0 0.0 ]>
+                <[float64][ConeCenter][1.0]>
+                <[float64][ConeCutoff][0.75]>
+                <[float64][Size][0.059]>
+                <[tmvector3d][Color][ 1.0 0.8 0.7 1.0 ]>
+                <[float64][Brightness][70.0]>
                 <[string8][InputModulation][LandingLightOn.Output]>
+            >
+            <[graphics_conelight][LandingLightCone][]
+                <[uint32][PositionID][LeftWing.R]>
+                <[uint32][OrientationID][LeftWing.Q]>
+                <[tmvector3d][R0][ 1.6366 0.0 -0.1275 ]>
+                <[tmvector3d][X0][ 1.0 0.0 -0.1 ]>
+                <[tmvector3d][Color][ 1.0 0.8 0.6 1.0 ]>
+                <[float64][Brightness][20.0]>
+                <[float64][ConeCenter][1.0]>
+                <[float64][ConeCutoff][0.9]>
+                <[string8][InputModulation][LandingLightOn.Output]>
+                <[float64][Size][400.0]>
+                <[float64][Falloff][8.0]>
+            >
+            <[graphics_conelight][LandingLightWideCone][]
+                <[uint32][PositionID][LeftWing.R]>
+                <[uint32][OrientationID][LeftWing.Q]>
+                <[tmvector3d][R0][ 1.6366 0.0 -0.1275 ]>
+                <[tmvector3d][X0][ 1.0 0.0 -0.1 ]>
+                <[tmvector3d][Color][ 1.0 0.8 0.6 1.0 ]>
+                <[float64][Brightness][4.0]>
+                <[float64][ConeCenter][1.0]>
+                <[float64][ConeCutoff][-0.8]>
+                <[string8][InputModulation][LandingLightOn.Output]>
+                <[float64][Size][40.0]>
+                <[float64][Falloff][8.0]>
             >
             // strobe lights
             <[graphics_input][UniversalTime][]
@@ -1562,10 +1643,22 @@
                 <[tmvector3d][X0][ 0.0 1.0 0.0 ]>
                 <[string8][InputModulation][StrobeSwitched.Output]>
                 <[tmvector3d][Color][ 0.7 0.7 1.0 1.0 ]>
-                <[float64][Size][0.01]>
+                <[float64][Size][0.03]>
                 <[float64][ConeCenter][0.0]>
                 <[float64][ConeCutoff][-0.5]>
-                <[float64][Brightness][15.0]>
+                <[float64][Brightness][30.0]>
+            >
+            <[graphics_conelight][LeftStrobeLightCone][]
+                <[uint32][PositionID][LeftWing.R]>
+                <[uint32][OrientationID][LeftWing.Q]>
+                <[tmvector3d][R0][-0.1637 5.3642 0.1500]>
+                <[tmvector3d][X0][ 0.0 1.0 0.0 ]>
+                <[float64][Brightness][ 0.2 ]>
+                <[float64][ConeCenter][0.5]>
+                <[float64][ConeCutoff][-0.2]>
+                <[string8][InputModulation][StrobeSwitched.Output]>
+                <[float64][Size][50.0]>
+                <[float64][Falloff][8.0]>
             >
             <[graphics_pointlight][RightStrobeLight][]
                 <[uint32][PositionID][RightWing.R]>
@@ -1574,10 +1667,22 @@
                 <[tmvector3d][X0][ 0.0 -1.0 0.0 ]>
                 <[string8][InputModulation][StrobeSwitched.Output]>
                 <[tmvector3d][Color][ 0.7 0.7 1.0 1.0 ]>
-                <[float64][Size][0.01]>
+                <[float64][Size][0.03]>
                 <[float64][ConeCenter][0.0]>
                 <[float64][ConeCutoff][-0.5]>
-                <[float64][Brightness][15.0]>
+                <[float64][Brightness][30.0]>
+            >
+            <[graphics_conelight][RightStrobeLightCone][]
+                <[uint32][PositionID][RightWing.R]>
+                <[uint32][OrientationID][RightWing.Q]>
+                <[tmvector3d][R0][-0.1694 -5.3354 0.1520]>
+                <[tmvector3d][X0][ 0.0 -1.0 0.0 ]>
+                <[float64][Brightness][ 0.2 ]>
+                <[float64][ConeCenter][0.5]>
+                <[float64][ConeCutoff][-0.2]>
+                <[string8][InputModulation][StrobeSwitched.Output]>
+                <[float64][Size][50.0]>
+                <[float64][Falloff][8.0]>
             >
 
         // obj1 - Fuselage
