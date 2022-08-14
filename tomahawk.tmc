@@ -3,7 +3,7 @@
         <[int][Version][220]>
         <[vec32array][ContactSpheres][ (1.203 0.0 -0.9213 0.178) (-0.3125 -1.33 -0.9397 0.178) (-0.3125 1.33 -0.9397 0.178) ]>
         <[string8][ICAO][PA38]>
-        <[string8][DisplayName][PA-38 Tomahawk]>
+        <[string8][DisplayName][Tomahawk]>
         <[string8][DisplayNameFull][Piper PA-38 Tomahawk]>
         <[localized_text_list][Descriptions][]
             <[localized_text][][]
