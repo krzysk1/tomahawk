@@ -206,7 +206,6 @@
                 <[float64][Inflation][213737.56]>
                 <[string8][Body][FrontGear]>
                 <[tmvector3d][R0][1.203 0.0 -0.9213]>
-                <[tmvector3d][X0][ 1.0 0.0 0.0 ]>
             >
             <[wheel][LeftWheelHull][]
                 <[float64][K][102800]>
@@ -217,7 +216,6 @@
                 <[float64][Inflation][379211.8]>
                 <[string8][Body][LeftGear]>
                 <[tmvector3d][R0][-0.3125 1.33 -0.9397]>
-                <[tmvector3d][X0][ 1.0 0.0 0.0 ]>
                 <[string8][InputBrake][LeftBrake.Output]>
                 <[float64][BrakeStrength][1.0]>
             >
@@ -230,7 +228,6 @@
                 <[float64][Inflation][379211.8]>
                 <[string8][Body][RightGear]>
                 <[tmvector3d][R0][-0.3125 -1.33 -0.9397]>
-                <[tmvector3d][X0][ 1.0 0.0 0.0 ]>
                 <[string8][InputBrake][RightBrake.Output]>
                 <[float64][BrakeStrength][1.0]>
             >
@@ -3128,8 +3125,8 @@
             <[texture_animation_map_display][DisplayMap][]
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-               <[tmvector2d][TargetPosition][ 0 0 ]>
-                <[tmvector2d][TargetSize][ 512 512 ]>
+               <[tmvector2d][TargetPosition][ 0.0 0.0 ]>
+                <[tmvector2d][TargetSize][ 1.0 1.0 ]>
                 <[tmvector2d][TargetScale][ 512 512 ]>
                 <[string8][InputZoom][MapZoom.Output]>
             >

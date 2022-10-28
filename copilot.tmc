@@ -46,5 +46,6 @@
         <[float64][YawTrimFactor][0.1]>
         <[float64][FlareHeightScaling][0.5]>
         <[float64][FlareExpectedNoseDrop][0.1]>
+        <[float64][StarterMaximumTime][3.0]>
     >
 >
