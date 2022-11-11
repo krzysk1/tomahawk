@@ -1922,8 +1922,8 @@
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[string8][InputID][ServoPedals.Output]>
                 <[tmvector3d][Axis][-1.0 0.0 0.0]>
-//                 <[float64][Pos1][0.12]>
-                <[float64][Scaling][0.0]>
+				<[float64][Offset][0.06]>
+                <[float64][Scaling][0.06]>
             >
             <[movinggraphics][RightRudderPedals][]
                 <[string8][GeometryList][ Obj4115959 Obj4118119 ]>
@@ -1931,8 +1931,8 @@
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[string8][InputID][ServoPedals.Output]>
                 <[tmvector3d][Axis][1.0 0.0 0.0]>
-//                 <[float64][Pos1][0.12]>
-                <[float64][Scaling][0.0]>
+				<[float64][Offset][0.06]>
+                <[float64][Scaling][0.06]>
             >
             //
             <[graphics_input][obj4Input_2][]
@@ -3056,8 +3056,7 @@
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][InputID][PitchAngle.Output]>
                 <[tmvector3d][Axis][0.0 0.0 1.0]>
-                <[float64][Scaling][0.03]>
-//                 <[float64][Pos1][-0.03]>
+                <[float64][Scaling][-0.03]>
                 <[string8][Graphics][ArtificialHorizonBack]>
             >
             <[rigidbodygraphics][ArtificialHorizon_Gauge][]

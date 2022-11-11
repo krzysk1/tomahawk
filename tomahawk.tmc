@@ -3,13 +3,17 @@
         <[int][Version][220]>
         <[vec32array][ContactSpheres][ (1.203 0.0 -0.9213 0.178) (-0.3125 -1.33 -0.9397 0.178) (-0.3125 1.33 -0.9397 0.178) ]>
         <[string8][ICAO][PA38]>
-        <[string8][DisplayName][Tomahawk]>
+        <[string8][DisplayName][Piper Tomahawk]>
         <[string8][DisplayNameFull][Piper PA-38 Tomahawk]>
         <[localized_text_list][Descriptions][]
             <[localized_text][][]
                 <[string8][Language][en]>
                 <[string8][Text][The Piper PA-38-112 Tomahawk is a two-seat, fixed tricycle gear general aviation airplane, originally designed for flight training, touring and personal use. For Aerofly FS4 made by Krzysztof Kaniewski. Original 3D model created by Adrian Fernandez Gomez.]>
             >
+            <[localized_text][][]
+                <[string8][Language][de]>
+                <[string8][Text][Die Piper PA-38 Tomahawk ist ein zweisitziges Leichtflugzeug des US-amerikanischen Flugzeugherstellers Piper Aircraft Corporation. Es wurde als Ganzmetallflugzeug mit Bugradfahrwerk, T-Leitwerk und Flügeln in Tiefdeckeranordnung konzipiert. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Adrian Fernandez Gomez.]>
+			>			
         >
 		<[float64][WingSpan][10.4]>
 		<[float64][MaximumAirspeed][69.0]>
@@ -30,7 +34,7 @@
         <[uint][EngineCount][1]>
         <[uint][Year][1978]>
         <[tmvector2d][FlapSettings][ (0.0 0.00) (0.33 0.366519) (0.67 0.593412) (1.00 0.715585) ]>
-        <[string8][Tags][ airplane piston general_aviation gear tailgear flaps ]>
+        <[string8][Tags][ airplane piston general_aviation trainer gear tailgear flaps ]>
         <[string8][Pilot][]>
     >
 >
