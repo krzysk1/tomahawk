@@ -13,7 +13,7 @@
             <[localized_text][][]
                 <[string8][Language][de]>
                 <[string8][Text][Die Piper PA-38 Tomahawk ist ein zweisitziges Leichtflugzeug des US-amerikanischen Flugzeugherstellers Piper Aircraft Corporation. Es wurde als Ganzmetallflugzeug mit Bugradfahrwerk, T-Leitwerk und Flügeln in Tiefdeckeranordnung konzipiert. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Adrian Fernandez Gomez.]>
-			>			
+			>
         >
 		<[float64][WingSpan][10.4]>
 		<[float64][MaximumAirspeed][69.0]>
