@@ -1,7 +1,7 @@
 ﻿<[file][][]
     <[object][][]
         <[int][Version][220]>
-        <[vec32array][ContactSpheres][ (1.203 0.0 -0.9213 0.178) (-0.3125 -1.33 -0.9397 0.178) (-0.3125 1.33 -0.9397 0.178) ]>
+        <[vec32array][ContactSpheres][ (1.203 0.0 -0.921 0.178) (-0.312 -1.33 -0.94 0.178) (-0.312 1.33 -0.94 0.178) ]>
         <[string8][ICAO][PA38]>
         <[string8][DisplayName][Piper Tomahawk]>
         <[string8][DisplayNameFull][Piper PA-38 Tomahawk]>

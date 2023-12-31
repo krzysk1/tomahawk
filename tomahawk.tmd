@@ -4,7 +4,7 @@
     // Plane: Piper Pa-38 Tomahawk
 	// Compilation: Krzysztof Kaniewski
 	// 3D model: Adrian Fernandez Gomez (Alcala Simulacion)
-	// Date: Dec 2014 (AFS1) - Jul 2022 (AFS4)
+	// Date: Dec 2014 (AFS1) - Jul 2022; May 2023 (AFS4)
     //-------------------------------------
 
     <[modelmanager][][]
@@ -103,6 +103,7 @@
                 <[string8][Geometry][Obj149740]>
                 <[float64][K][1624000]>
                 <[float64][D][16240]>
+                <[bool][InstantCrash][true]>
             >
             <[collisionhull][CollisionLeftWing][]
                 <[string8][Body][LeftWing]>
@@ -772,7 +773,7 @@
                 <[float64][Friction][50.0]>
                 <[float64][RatedRotationSpeed][260.0]>
                 <[float64][RatedPower][83518]>
-                <[float64][Displacement][0.003823 ]>
+                <[float64][Displacement][0.003823]>
             >
             <[air_flow][CoolingAir][]
                 <[string8][Body][Fuselage]>
@@ -1866,7 +1867,7 @@
                 <[uint32][AttachTo][1]>
             >
             // Propeller
-            <[propellergraphics][Propeller][]
+            <[propellergraphics][PropellerDisk][]
                 <[string8][GeometryList][ Propellerdisk ]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][AngleID][Propeller.RotationAngle]>
@@ -2783,7 +2784,7 @@
             <[graphics_flasher][BeaconRotation][]
                 <[string8][Function][Triangle]>
                 <[string8][InputTime][UniversalTime.Output]>
-                <[float64][Period][8.493]>
+                <[float64][Period][25.5]>
                 <[float64][Minimum][0.0]>
             >
             <[graphics_linear_interpolation][obj3Input_0][]
@@ -3205,6 +3206,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][prop1.wav]>
+                <[tmvector3d][R0][1.9 0.0 0.1]>
             >
 
             // starter cranking
@@ -3226,6 +3228,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][star1.wav]>
+                <[tmvector3d][R0][1.6 0.0 0.1]>
             >
 
             // engine loop rpm_eng 2500.0
@@ -3245,7 +3248,8 @@
                 <[string8][InputPitch][RPMPitchRun.Output]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
-               <[string8][SoundFile][engn1.wav]>
+                <[string8][SoundFile][engn1.wav]>
+                <[tmvector3d][R0][1.6 0.0 0.1]>
             >
 
             // wheels

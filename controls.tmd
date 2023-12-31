@@ -461,8 +461,50 @@
                 <[float64][Radius][0.018]>
                 <[float64][Length][0.03]>
             >
-			
-			
+
+			<[control_input][DoorLeftInput][]
+				<[string8][InputID][ServoDoor.Output]>
+			>
+            <[control_product][DoorLeftMapping][]
+                <[uint32][Inputs][DoorLeftInput.Output 1.658063]>
+            >			
+			<[control_rotation][RotationDoorLeft][]
+				<[string8][Input][DoorLeftMapping.Output]>
+                <[tmvector3d][Axis][ 0.0 0.0 -1.0 ]>
+                <[tmvector3d][Pivot][0.1044 0.6198 0.0445]>
+			>
+			<[control_input][DoorLeftHandleInput][]
+				<[string8][InputID][ServoDoorHandle.Output]>
+			>			
+            <[control_product][RotationDoorLeftHandleMapping][]
+                <[uint32][Inputs][DoorLeftHandleInput.Output 1.570797]>
+            >			
+			<[control_rotation][RotationDoorLeftHandle][]
+				<[string8][Input][RotationDoorLeftHandleMapping.Output]>
+                <[tmvector3d][Axis][ 0.0 -1.0 0.0 ]>
+                <[tmvector3d][Pivot][-0.2725 0.6313 0.2849]>
+				<[string8][InputTransform][RotationDoorLeft.Output]>
+			>
+			<[control_box][DoorLeftHandle][]
+				<[vector3_float64][Direction][ 1.0 1.0 0.0 ]>
+                <[vector3_float64][R0][-0.1608 0.5729 0.2849]>
+                <[matrix3_float64][B0][1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0]>
+				<[string8][Type][lever knob]>
+				<[float64][StepDistance][0.003]>
+				<[string8][InputTransform][RotationDoorLeftHandle.Output]>
+				<[control_message][OnStep][]
+					<[string8][Message][Controls.DoorLeftHandle]>
+					<[string8][Qualifiers][step]>
+					<[float64][Value][0.005]>
+				>
+				<[control_message][OnPush][]
+					<[string8][Message][Controls.DoorLeftHandle]>
+					<[string8][Qualifiers][toggle]>
+					<[float64][Value][1.0]>
+				>
+				<[vector3_float64][Dimensions][0.0435 0.0359 0.0173]>
+			>
+                    					
         >
     >
 >
