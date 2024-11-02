@@ -1,18 +1,22 @@
 ﻿<[file][][]
-    <[object][][]
-        <[int][Version][220]>
-        <[vec32array][ContactSpheres][ (1.203 0.0 -0.921 0.178) (-0.312 -1.33 -0.94 0.178) (-0.312 1.33 -0.94 0.178) ]>
-        <[string8][ICAO][PA38]>
+    <[modelinformation][][]
+        <[int32][Version][220]>
+        <[list_vector4_float64][ContactSpheres][ (1.203 0.0 -0.921 0.178) (-0.312 -1.33 -0.94 0.178) (-0.312 1.33 -0.94 0.178) ]>
+        <[stringt8c][ICAO][PA38]>
         <[string8][DisplayName][Piper Tomahawk]>
         <[string8][DisplayNameFull][Piper PA-38 Tomahawk]>
-        <[localized_text_list][Descriptions][]
-            <[localized_text][][]
+        <[list_localized_text][Descriptions][]
+            <[localized_text][element][0]
                 <[string8][Language][en]>
                 <[string8][Text][The Piper PA-38-112 Tomahawk is a two-seat, fixed tricycle gear general aviation airplane, originally designed for flight training, touring and personal use. For Aerofly FS4 made by Krzysztof Kaniewski. Original 3D model created by Adrian Fernandez Gomez.]>
             >
-            <[localized_text][][]
+            <[localized_text][element][1]
                 <[string8][Language][de]>
                 <[string8][Text][Die Piper PA-38 Tomahawk ist ein zweisitziges Leichtflugzeug des US-amerikanischen Flugzeugherstellers Piper Aircraft Corporation. Es wurde als Ganzmetallflugzeug mit Bugradfahrwerk, T-Leitwerk und Flügeln in Tiefdeckeranordnung konzipiert. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Adrian Fernandez Gomez.]>
+			>
+            <[localized_text][element][2]
+                <[string8][Language][pl]>
+                <[string8][Text][Piper PA-38-112 Tomahawk to dwumiejscowy samolot lotnictwa ogólnego ze stałym trójkołowym podwoziem, pierwotnie zaprojektowany do szkolenia lotniczego, turystyki i użytku osobistego. Dla Aerofly FS4 wykonany przez Krzysztofa Kaniewskiego. Oryginalny model 3D stworzony przez Adriana Fernandeza Gomeza.]>
 			>
         >
 		<[float64][WingSpan][10.4]>

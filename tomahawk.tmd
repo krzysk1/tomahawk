@@ -769,7 +769,7 @@
                 <[float64][InputTemperature] [EngineHousing.Output]>
                 <[float64][AddHeat]          [EngineHousing.AddHeat]>
                 <[float64][RotationInertia][1.1776]>
-                <[float64][ThrottleIdle][0.1]>
+                <[float64][ThrottleIdle][0.12]>
                 <[float64][Friction][50.0]>
                 <[float64][RatedRotationSpeed][260.0]>
                 <[float64][RatedPower][83518]>
