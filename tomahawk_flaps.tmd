@@ -1,0 +1,65 @@
+<[file][up][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // flaps up
+            <[input_lever][FlapsInput][]
+                <[float64][Value][0.0]>
+            >
+
+            // trim cruise
+            <[input_default][PitchTrim][]
+                <[float64][Value][0.54]>
+            >
+        >
+    >
+>
+<[file][takeoff][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // flaps 0
+            <[input_lever][FlapsInput][]
+                <[float64][Value][0.0]>
+            >
+
+            // trim takeoff
+           <[input_default][ElevatorTrimInput][]
+                <[float64][Value][-0.18]>
+            >
+        >
+    >
+>
+<[file][approach][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // flaps 10
+            <[input_lever][FlapsInput][]
+                <[float64][Value][0.333]>
+            >
+
+            // trim approach
+           <[input_default][ElevatorTrimInput][]
+                <[float64][Value][-0.18]>
+            >
+        >
+    >
+>
+<[file][landing][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // flaps 30
+            <[input_lever][FlapsInput][]
+                <[float64][Value][1.0]>
+            >
+
+            // trim landing
+           <[input_default][ElevatorTrimInput][]
+                <[float64][Value][-0.446274428698863]>
+            >
+        >
+    >
+>
+

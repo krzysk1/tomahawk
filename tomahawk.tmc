@@ -7,37 +7,37 @@
         <[string8][DisplayNameFull][Piper PA-38 Tomahawk]>
         <[list_localized_text][Descriptions][]
             <[localized_text][element][0]
-                <[string8][Language][en]>
+                <[string8u][Language][en]>
                 <[string8][Text][The Piper PA-38-112 Tomahawk is a two-seat, fixed tricycle gear general aviation airplane, originally designed for flight training, touring and personal use. For Aerofly FS4 made by Krzysztof Kaniewski. Original 3D model created by Adrian Fernandez Gomez.]>
             >
             <[localized_text][element][1]
-                <[string8][Language][de]>
+                <[string8u][Language][de]>
                 <[string8][Text][Die Piper PA-38 Tomahawk ist ein zweisitziges Leichtflugzeug des US-amerikanischen Flugzeugherstellers Piper Aircraft Corporation. Es wurde als Ganzmetallflugzeug mit Bugradfahrwerk, T-Leitwerk und Flügeln in Tiefdeckeranordnung konzipiert. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Adrian Fernandez Gomez.]>
 			>
             <[localized_text][element][2]
-                <[string8][Language][pl]>
+                <[string8u][Language][pl]>
                 <[string8][Text][Piper PA-38-112 Tomahawk to dwumiejscowy samolot lotnictwa ogólnego ze stałym trójkołowym podwoziem, pierwotnie zaprojektowany do szkolenia lotniczego, turystyki i użytku osobistego. Dla Aerofly FS4 wykonany przez Krzysztofa Kaniewskiego. Oryginalny model 3D stworzony przez Adriana Fernandeza Gomeza.]>
 			>
         >
-		<[float64][WingSpan][10.4]>
-		<[float64][MaximumAirspeed][69.0]>
-		<[float64][MaximumSpeed][69.0]>
-		<[float64][MinimumAirspeed][24.5]>
-        <[float64][ApproachAirspeed][33.3]>
-        <[float64][CruiseAirspeed][50.0]>
-        <[float64][CruiseSpeed][69.0]>
-		<[tmvector2d][NormalAirspeedRange][ 24.5 55.0 ]>
-		<[tmvector2d][CautionAirspeedRange][ 55.0 69.0 ]>
-		<[tmvector2d][FlapAirspeedRange][ 24.5 49.5 ]>
-        <[float64][MaximumAltitude][4000.0]>
-        <[float64][CruiseAltitude][3200.0]>
         <[float64][MaximumTakeoffMass][757.0]>
-        <[float64][EnginePower][83500.0]>
-        <[float64][MaximumRange][867000.0]>
-        <[uint][UnitsBuilt][2484]>
-        <[uint][EngineCount][1]>
-        <[uint][Year][1978]>
-        <[tmvector2d][FlapSettings][ (0.0 0.00) (0.33 0.366519) (0.67 0.593412) (1.00 0.715585) ]>
+		<[float64][WingSpan]          [10.4]>
+        <[uint32] [Year]              [1978]>
+        <[uint32] [UnitsBuilt]        [2484]>
+        <[uint32] [EngineCount]       [1]>
+        <[float64][EnginePower]       [83500.0]>
+		<[float64][MaximumAirspeed]   [69.0]>
+		<[float64][MaximumSpeed]      [69.0]>
+		<[float64][MinimumAirspeed]   [24.5]>
+        <[float64][ApproachAirspeed]  [33.3]>
+        <[float64][CruiseAirspeed]    [50.0]>
+        <[float64][CruiseSpeed]       [69.0]>
+        <[float64][MaximumAltitude]   [4000.0]>
+        <[float64][CruiseAltitude]    [3200.0]>
+        <[float64][MaximumRange]      [867000.0]>
+		<[vector2_float64][FlapAirspeedRange]   [ 24.5 49.5 ]>
+		<[vector2_float64][NormalAirspeedRange] [ 24.5 55.0 ]>
+		<[vector2_float64][CautionAirspeedRange][ 55.0 69.0 ]>
+        <[list_vector2_float64][FlapSettings][ (0.0 0.00) (0.333 0.366519) (0.667 0.593412) (1.00 0.715585) ]>
         <[string8][Tags][ airplane piston general_aviation trainer gear tailgear flaps ]>
         <[string8][Pilot][]>
     >

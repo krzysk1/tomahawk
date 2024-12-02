@@ -4,7 +4,7 @@
     // Plane: Piper Pa-38 Tomahawk
 	// Compilation: Krzysztof Kaniewski
 	// 3D model: Adrian Fernandez Gomez (Alcala Simulacion)
-	// Date: Dec 2014 (AFS1) - Jul 2022; May 2023 (AFS4)
+	// Date: Dec 2014 (AFS1) - Jul 2022; May 2023 (AFS4) ; Dec 2024
     //-------------------------------------
 
     <[modelmanager][][]
@@ -333,15 +333,14 @@
             >
             <[aerowing][LeftWingAero][]
                 <[string8][Body][LeftWing]>
-                <[float64][Span][5.1816]>
-                <[float64][Area][6.317407]>
                 <[string8][Flap0Control][ServoLeftAileron.Output]>
                 <[string8][Flap1Control][ServoFlaps.Output]>
                 <[float64array][StationY]           [ 0.0 0.64472 2.57887 5.15775 ]>
                 <[float64array][StationLE]          [ 0.33216 0.33216 0.33216 0.33216 ]>
                 <[float64array][StationTE]          [ -0.88704 -0.88704 -0.88704 -0.88704 ]>
                 <[float64array][StationZ]           [ -0.51816 -0.45608 -0.26984 -0.02153 ]>
-                <[float64array][StationIncidence]   [ 0.0 0.0 0.0 0.0 ]>
+//                <[float64array][StationIncidence]   [ 0.0 0.0 0.0 0.0 ]>
+                <[float64array][StationIncidence]   [ 0.03491 0.03491 0.03491 0.03491 ]>
                 <[uint32array][StationFlap]         [ 0 2 1 0 ]>
                 <[float64array][StationFlapFraction][ 0.00 0.30 0.30 0.00 ]>
                 <[float64][AspectRatioMultiplier][2.0]>
@@ -357,15 +356,14 @@
             >
             <[aerowing][RightWingAero][]
                 <[string8][Body][RightWing]>
-                <[float64][Span][5.1816]>
-                <[float64][Area][6.317407]>
                 <[string8][Flap0Control][ServoRightAileron.Output]>
                 <[string8][Flap1Control][ServoFlaps.Output]>
                 <[float64array][StationY]           [ -5.15775 -2.57887 -0.64472 0.0 ]>
                 <[float64array][StationLE]          [ 0.33216 0.33216 0.33216 0.33216 ]>
                 <[float64array][StationTE]          [ -0.88704  -0.88704 -0.88704 -0.88704 ]>
                 <[float64array][StationZ]           [ -0.02153 -0.26984 -0.45608 -0.51816 ]>
-                <[float64array][StationIncidence]   [ 0.0 0.0 0.0 0.0 ]>
+//                <[float64array][StationIncidence]   [ 0.0 0.0 0.0 0.0 ]>
+                <[float64array][StationIncidence]   [ 0.03491 0.03491 0.03491 0.03491 ]>
                 <[uint32array][StationFlap]         [ 1 2 0 0 ]>
                 <[float64array][StationFlapFraction][ 0.30 0.30 0.00 0.00 ]>
                 <[float64][AspectRatioMultiplier][2.0]>
@@ -381,14 +379,12 @@
             >
             <[aerowing][LeftStabilizerAero][]
                 <[string8][Body][Fuselage]>
-                <[float64][Span][1.2192]>
-                <[float64][Area][1.003353]>
                 <[string8][Flap0Control][ServoElevator.Output]>
                 <[float64array][StationY]           [ 0.0 1.21920 ]>
                 <[float64array][StationLE]          [ -4.33890 -4.33890 ]>
                 <[float64array][StationTE]          [ -5.16186 -5.16186 ]>
                 <[float64array][StationZ]           [ 1.37160  1.37160 ]>
-                <[float64array][StationIncidence]   [ 0.0 0.0 ]>
+                <[float64array][StationIncidence]   [ -0.008726 -0.008726 ]>
                 <[uint32array][StationFlap]         [ 1 0 ]>
                 <[float64array][StationFlapFraction][ 0.40 0.00 ]>
                 <[float64][AspectRatioMultiplier][2.0]>
@@ -404,14 +400,12 @@
             >
             <[aerowing][RightStabilizerAero][]
                 <[string8][Body][Fuselage]>
-                <[float64][Span][1.2192]>
-                <[float64][Area][1.003353]>
                 <[string8][Flap0Control][ServoElevator.Output]>
                 <[float64array][StationY]           [ -1.21920 0.0 ]>
                 <[float64array][StationLE]          [ -4.33890 -4.33890 ]>
                 <[float64array][StationTE]          [ -5.16186 -5.16186 ]>
                 <[float64array][StationZ]           [ 1.37160 1.37160 ]>
-                <[float64array][StationIncidence]   [ 0.0 0.0 ]>
+                <[float64array][StationIncidence]   [ -0.008726 -0.008726 ]>
                 <[uint32array][StationFlap]         [ 1 0 ]>
                 <[float64array][StationFlapFraction][ 0.40 0.00 ]>
                 <[float64][AspectRatioMultiplier][2.0]>
@@ -427,14 +421,13 @@
             >
             <[aerowing][VertStabilizerAero][]
                 <[string8][Body][Fuselage]>
-                <[float64][Span][1.7983]>
-                <[float64][Area][2.165105]>
                 <[string8][Flap0Control][ServoRudder.Output]>
                 <[float64array][StationY]           [ 0.0 0.0 ]>
                 <[float64array][StationLE]          [ -4.42690 -3.31020 ]>
                 <[float64array][StationTE]          [ -5.24986 -4.89516 ]>
                 <[float64array][StationZ]           [ 1.54146 0.0 ]>
-                <[float64array][StationIncidence]   [ 0.03491 0.01745 ]>
+//                <[float64array][StationIncidence]   [ 0.03491 0.01745 ]>  // ???? constant side slip WTF? FOOBAR
+                <[float64array][StationIncidence]   [ 0.0 0.0 ]> 
                 <[uint32array][StationFlap]         [ 1 0 ]>
                 <[float64array][StationFlapFraction][ 0.28 0.00 ]>
                 <[float64][AspectRatioMultiplier][1.0]>
@@ -616,7 +609,7 @@
                 <[string8][Input][FlapsInput.Output]>
                 <[float64][OutputSpeed][0.5]>
                 <[float64][Position][0.0]>
-                <[float64array][InputPosition][ 0.0 0.33 0.67 1.00 ]>
+                <[float64array][InputPosition][ 0.0 0.333 0.667 1.00 ]>
                 <[float64array][OutputPosition][ 0.0 0.366519 0.593412 0.715585 ]>
             >
             <[output_free][ServoFlapsOutput][]
@@ -769,7 +762,7 @@
                 <[float64][InputTemperature] [EngineHousing.Output]>
                 <[float64][AddHeat]          [EngineHousing.AddHeat]>
                 <[float64][RotationInertia][1.1776]>
-                <[float64][ThrottleIdle][0.12]>
+                <[float64][ThrottleIdle][0.1]>
                 <[float64][Friction][50.0]>
                 <[float64][RatedRotationSpeed][260.0]>
                 <[float64][RatedPower][83518]>
@@ -1472,7 +1465,7 @@
                 <[float64][OutputSpeed][0.5]>
                 <[float64][Position][0.0]>
                 <[float64array][InputPosition][ 1.0 2.0 ]>
-                <[float64array][OutputPosition][ 1.0 0.0 ]>
+                <[float64array][OutputPosition][ 0.0 0.0 ]>  // just keep the door closed all the time   <- 1.0 0.0
             >
             <[output_free][ServoDoorOutput][]
                 <[string8][Input][ServoDoor.Output]>
@@ -3034,7 +3027,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[string8][InputID][HeadingAngle.Output]>
-                <[tmvector3d][Axis][ -1.0 0.0 0.0 ]>
+                <[tmvector3d][Axis][ 1.0 0.0 0.0 ]>
                 <[tmvector3d][Pivot][0.3332 0.2576 0.2513]>
             >
             <[rigidbodygraphics][DGsPlane][]
@@ -3068,11 +3061,11 @@
             // Variometer gauge
             <[graphics_input][VerticalSpeedInput][]
                 <[uint32][InputID][VerticalSpeedIndicatorNeedle.Output]>
-                <[float64][Scaling][196.850394]>
+                <[float64][Scaling][1.968504]>
             >
             <[graphics_linear_interpolation][VerticalSpeedMapping][]
                 <[string8][Input][VerticalSpeedInput.Output]>
-                <[tmvector2d][Map][(-2000.0 -4.5902) (0 -1.5708) (2000.0 1.48353)]>
+                <[tmvector2d][Map][(-20.0 -4.5902) (0 -1.5708) (20.0 1.48353)]>
             >
             <[hingedbodygraphics][Variometer_Needle][]
                 <[string8][GeometryList][ VviNeedle ]>
