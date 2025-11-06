@@ -8,15 +8,27 @@
         <[list_localized_text][Descriptions][]
             <[localized_text][element][0]
                 <[string8u][Language][en]>
-                <[string8][Text][The Piper PA-38-112 Tomahawk is a two-seat, fixed tricycle gear general aviation airplane, originally designed for flight training, touring and personal use. For Aerofly FS4 made by Krzysztof Kaniewski. Original 3D model created by Adrian Fernandez Gomez.]>
+                <[string8][Text][The Piper PA-38 Tomahawk is a two-seat, fixed tricycle gear general aviation airplane, originally designed for flight training, touring and personal use. For Aerofly FS4 made by Krzysztof Kaniewski. Original 3D model created by Adrian Fernandez Gomez.]>
             >
             <[localized_text][element][1]
                 <[string8u][Language][de]>
                 <[string8][Text][Die Piper PA-38 Tomahawk ist ein zweisitziges Leichtflugzeug des US-amerikanischen Flugzeugherstellers Piper Aircraft Corporation. Es wurde als Ganzmetallflugzeug mit Bugradfahrwerk, T-Leitwerk und Flügeln in Tiefdeckeranordnung konzipiert. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Adrian Fernandez Gomez.]>
 			>
             <[localized_text][element][2]
+                <[string8u][Language][fr]>
+                <[string8][Text][Le Piper PA-38 Tomahawk est un avion d'aviation générale biplace à train tricycle fixe, initialement conçu pour la formation au pilotage, le tourisme et l'usage personnel. Pour Aerofly FS4, réalisé par Krzysztof Kaniewski. Modèle 3D original créé par Adrian Fernandez Gomez.]>
+			>
+            <[localized_text][element][3]
+                <[string8u][Language][es]>
+                <[string8][Text][El Piper PA-38 Tomahawk es un avión de aviación general biplaza con tren de aterrizaje triciclo fijo, diseñado originalmente para entrenamiento de vuelo, turismo y uso personal. Para Aerofly FS4, creado por Krzysztof Kaniewski. Modelo 3D original creado por Adrián Fernández Gómez.]>
+			>
+            <[localized_text][element][4]
+                <[string8u][Language][it]>
+                <[string8][Text][Il Piper PA-38 Tomahawk è un aereo biposto dell'aviazione generale con carrello triciclo fisso, originariamente progettato per l'addestramento al volo, il turismo e l'uso personale. Per Aerofly FS4 realizzato da Krzysztof Kaniewski. Modello 3D originale creato da Adrian Fernandez Gomez.]>
+			>
+            <[localized_text][element][5]
                 <[string8u][Language][pl]>
-                <[string8][Text][Piper PA-38-112 Tomahawk to dwumiejscowy samolot lotnictwa ogólnego ze stałym trójkołowym podwoziem, pierwotnie zaprojektowany do szkolenia lotniczego, turystyki i użytku osobistego. Dla Aerofly FS4 wykonany przez Krzysztofa Kaniewskiego. Oryginalny model 3D stworzony przez Adriana Fernandeza Gomeza.]>
+                <[string8][Text][Piper PA-38 Tomahawk to dwumiejscowy samolot lotnictwa ogólnego ze stałym trójkołowym podwoziem, pierwotnie zaprojektowany do szkolenia lotniczego, turystyki i użytku osobistego. Dla Aerofly FS4 wykonany przez Krzysztofa Kaniewskiego. Oryginalny model 3D stworzony przez Adriana Fernandeza Gomeza.]>
 			>
         >
         <[float64][MaximumTakeoffMass][757.0]>

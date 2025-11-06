@@ -4,7 +4,7 @@
     // Plane: Piper Pa-38 Tomahawk
 	// Compilation: Krzysztof Kaniewski
 	// 3D model: Adrian Fernandez Gomez (Alcala Simulacion)
-	// Date: Dec 2014 (AFS1) - Jul 2022; May 2023 (AFS4) ; Dec 2024
+	// Date: Dec 2014 (AFS1) - Jul 2022; May 2023 (AFS4); Dec 2024
     //-------------------------------------
 
     <[modelmanager][][]
@@ -31,32 +31,32 @@
                 <[bool][InCockpit][true]>
             >
             <[camera][CameraCopilot][]
-                <[string8][Tags][cockpit pilot rear]>
+                <[string8][Tags][cockpit copilot rear]>
                 <[bool][InCockpit][true]>
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][-0.3298 -0.2898 0.6305]>
                 <[tmvector3d][Direction][1.0 0.0 0.0]>
             >
             <[camera][CameraLeftWing][]
-                <[string8][Tags][left wing]>
+                <[string8][Tags][fuselage wing left]>
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ 4.3555 5.1577 -1.4518 ]>
                 <[tmvector3d][Direction][ -0.7740 -0.6095 0.1716 ]>
             >
             <[camera][CameraRightWing][]
-                <[string8][Tags][right wing]>
+                <[string8][Tags][fuselage wing right]>
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ -4.6240 -5.1577 1.3248 ]>
                 <[tmvector3d][Direction][ 0.4151 0.8812 -0.2263 ]>
             >
             <[camera][CameraFront][]
-                <[string8][Tags][nose]>
+                <[string8][Tags][cockpit outside]>
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ 6.3555 2.1778 2.1778 ]>
                 <[tmvector3d][Direction][ -0.9408 -0.2396 -0.2396 ]>
             >
             <[camera][CameraTail][]
-                <[string8][Tags][tail]>
+                <[string8][Tags][tail stabilizer]>
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ -5.6240 0.0 2.6080 ]>
                 <[tmvector3d][Direction][ 0.8408 0.0 -0.5413 ]>
@@ -3384,15 +3384,19 @@
                 <[string8][SoundFile][click.wav]>
                 <[bool][External][false]>
             >
-            <[soundinput][AvionicsSound][]
-                <[uint32][InputID][AvionicsSound.Output]>
+			// avionics sound
+            <[soundinput][AvionicsOnInput][]
+                <[uint32][InputID][AvionicsSwitch.Output]>
             >
-            <[sound_multi][SoundAvionics][]
+            <[soundmapping][AvionicsVolume][]
+                <[string8][Input][AvionicsOnInput.Output]>
+                <[tmvector2d][Map][ (0.0 0.0) (1.0 0.2) ]>
+            >
+            <[soundloop][AvionicsLoopIntern][]
+                <[string8][InputVolume][AvionicsVolume.Output]>
+                <[string8][InputPitch][1.0]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
-                <[string8][InputTrigger][AvionicsSound.Output]>
-                <[string8][InputVolume][0.6]>
-                <[string8][InputPitch][1.0]>
                 <[string8][SoundFile][avionics.wav]>
                 <[bool][External][false]>
             >
